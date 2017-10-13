@@ -1,0 +1,70 @@
+{
+  "name": "@salesforce/eslint-plugin-aura",
+  "version": "0.0.1",
+  "description": "ESLint plugin for salesforce-lightning-cli package",
+  "main": "dist/index.js",
+  "repository": "https://github.com/forcedotcom/eslint-plugin-aura",
+  "author": "Marat Vyshegorodtsev <marat@salesforce.com>",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.8.0",
+    "eslint-loader": "^1.9.0",
+    "webpack": "^3.7.1"
+  },
+  "peerDependencies": {
+    "eslint": "^4.8.0"
+  },
+  "dependencies": {
+    "salesforce-lightning-cli": "^1.5.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 4
+          },
+          "debug": true
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      },
+      "sourceType": "module"
+    }
+  },
+  "eslintIgnore": ["dist/"]
+}
