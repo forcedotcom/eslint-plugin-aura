@@ -8,7 +8,7 @@ This package is a bare wrapper of [salesforce-lightning-cli](https://www.npmjs.c
 Installation
 ------------
 
-Install [ESLint](https://www.github.com/eslint/eslint) and Salesforece Lightning plugin.
+Install [ESLint](https://www.github.com/eslint/eslint) and this plugin.
 ```sh
 $ yarn add --dev eslint @salesforce/eslint-plugin-aura
 ```
