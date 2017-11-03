@@ -2,7 +2,7 @@
  * @author Marat Vyshegorodtsev
  * @license BSD-3-Clause
  * For full license text, see LICENSE file in the repo root
- * or https://opensource.org/licenses/ISC
+ * or https://opensource.org/licenses/BSD-3-Clause
  */
 
 import auraComponentConfig  from 'salesforce-lightning-cli/lib/aura-component-config'

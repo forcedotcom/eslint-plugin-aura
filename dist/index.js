@@ -101,7 +101,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @author Marat Vyshegorodtsev
  * @license BSD-3-Clause
  * For full license text, see LICENSE file in the repo root
- * or https://opensource.org/licenses/ISC
+ * or https://opensource.org/licenses/BSD-3-Clause
  */
 
 delete _auraApi2.default.schema;
