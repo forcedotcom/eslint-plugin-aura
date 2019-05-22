@@ -27,7 +27,8 @@ module.exports = {
         Skip: 'readonly',
         Records: 'readonly',
         Stubs: 'readonly',
-        Mocks: 'readonly'
+        Mocks: 'readonly',
+        Assert: 'readonly'
       },
       rules: { ...auraComponentConfig.rules, ...codeStyleRulesConfig },
     }
