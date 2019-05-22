@@ -10,9 +10,25 @@ const rules = {
 module.exports = {
   configs: {
     recommended: {
-      env: auraComponentConfig.env,
+      env: {
+        ...auraComponentConfig.env,
+        es6: false
+      },
       parserOptions: auraComponentConfig.parserOptions,
-      globals: auraComponentConfig.globals,
+      globals: {
+        ...auraComponentConfig.globals,
+        Fixture: 'readonly',
+        ScrumTeam: 'readonly',
+        ImportJson: 'readonly',
+        Test: 'readonly',
+        Fact: 'readonly',
+        Data: 'readonly',
+        Async: 'readonly',
+        Skip: 'readonly',
+        Records: 'readonly',
+        Stubs: 'readonly',
+        Mocks: 'readonly'
+      },
       rules: { ...auraComponentConfig.rules, ...codeStyleRulesConfig },
     }
   },
