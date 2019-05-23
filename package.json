@@ -71,7 +71,5 @@
   "peerDependencies": {
     "eslint": ">=5.0.0"
   },
-  "dependencies": {
-    "salesforce-lightning-cli": "^1.5.2"
-  }
+  "dependencies": {}
 }
