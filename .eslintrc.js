@@ -8,6 +8,10 @@ module.exports = {
     "comma-dangle": 0,
     "func-names": 1,
     "prefer-arrow-callback": 1,
+    "no-plusplus": [
+      "error",
+      { "allowForLoopAfterthoughts": true }
+    ],
     quotes: ["error", "single"]
   }
 };
