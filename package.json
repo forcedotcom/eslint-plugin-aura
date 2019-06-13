@@ -74,5 +74,7 @@
   "peerDependencies": {
     "eslint": ">=5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "eslint-plugin-compat": "3.1.1"
+  }
 }
