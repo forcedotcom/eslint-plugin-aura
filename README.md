@@ -7,7 +7,7 @@ Installation
 ------------
 
 ```sh
-npm install --global git+ssh://git@git.soma.salesforce.com:julien-roche/eslint-aura-plugin.git
+npm install --global @salesforce/eslint-plugin-aura
 ```
 
 Configuration
@@ -18,7 +18,7 @@ Add plugin to your ESLint configuration with the recommended config. See
 Example:
 ```json
 {
-    "plugins": [ "eslint-plugin-aura" ],
-    "extends": [ "plugin:eslint-plugin-aura/recommended" ]
+    "plugins": [ "@salesforce/eslint-plugin-aura" ],
+    "extends": [ "plugin:@salesforce/eslint-plugin-aura/recommended" ]
 }
 ```
