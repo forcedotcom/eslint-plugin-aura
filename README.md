@@ -3,14 +3,11 @@ eslint-plugin-aura
 
 Salesforce Lightning (Aura) specific linting rules for ESLint
 
-This package is a bare wrapper of [salesforce-lightning-cli](https://www.npmjs.com/package/salesforce-lightning-cli) that makes it usable as an ESLint plugin.
-
 Installation
 ------------
 
-Install [ESLint](https://www.github.com/eslint/eslint) and this plugin.
 ```sh
-$ yarn add --dev eslint @salesforce/eslint-plugin-aura
+npm install --global @salesforce/eslint-plugin-aura
 ```
 
 Configuration
