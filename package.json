@@ -5,6 +5,13 @@
   "main": "lib/index.js",
   "repository": "https://github.com/forcedotcom/eslint-plugin-aura",
   "author": "Marat Vyshegorodtsev <marat@salesforce.com>",
+  "contributors": [
+    {
+      "name": "Julien Roche",
+      "email": "roche.jul@gmail.com",
+      "url": "https://github.com/rochejul"
+    }
+  ],
   "license": "BSD-3-Clause",
   "scripts": {
     "test": "node ./node_modules/jest/bin/jest.js --config jest.config.js"
