@@ -25,6 +25,14 @@ describe('Aura lib rule - ', () => {
           expect(eslintReport.results[0].messages).toEqual([]);
       });
 
+      it('with an aura controller', () => {
+        const eslintReport = cli.executeOnFiles([
+            `${baseTestFiles}/aura/myComponentController.js`
+        ]);
+
+        expect(eslintReport.results[0].messages.find((msg) => msg.message === 'The Aura service should be named "fakeInvalidService"')).not.toBeDefined();
+    });
+
       it('with invalid code', () => {
           const eslintReport = cli.executeOnFiles([
               `${baseTestFiles}/aura/fakeInvalidService.js`
