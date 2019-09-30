@@ -1,3 +1,10 @@
 node_modules/
-src/
-webpack.config.js
+coverage
+test
+.editorconfig
+.eslintrc.js
+.eslintignore
+.gitattributes
+.nvmrc
+.prettierrc
+jest.config.js
