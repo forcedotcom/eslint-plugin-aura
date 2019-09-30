@@ -1,17 +1,33 @@
-'use strict';
-
 module.exports = {
-  plugins: [],
-  extends: ["airbnb"],
-  rules: {
-    "arrow-parens": 0,
-    "comma-dangle": 0,
-    "func-names": 1,
-    "prefer-arrow-callback": 1,
-    "no-plusplus": [
-      "error",
-      { "allowForLoopAfterthoughts": true }
-    ],
-    quotes: ["error", "single"]
-  }
-};
+    'env': {
+        'commonjs': true,
+        'es6': true,
+        'node': true
+    },
+    'extends': 'eslint:recommended',
+    'globals': {
+        'Atomics': 'readonly',
+        'SharedArrayBuffer': 'readonly'
+    },
+    'parserOptions': {
+        'ecmaVersion': 2018
+    },
+    'rules': {
+        'indent': [
+            'error',
+            2
+        ],
+        'linebreak-style': [
+            'error',
+            'unix'
+        ],
+        'quotes': [
+            'error',
+            'single'
+        ],
+        'semi': [
+            'error',
+            'never'
+        ]
+    }
+}
