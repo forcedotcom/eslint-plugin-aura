@@ -1,1 +1,0 @@
-ScreenOrientation.lock();

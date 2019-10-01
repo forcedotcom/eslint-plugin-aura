@@ -1,1 +1,0 @@
-Object.values(document);
