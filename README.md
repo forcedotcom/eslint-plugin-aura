@@ -1,6 +1,9 @@
 eslint-plugin-aura
 ==================
 
+[![Build Status](https://travis-ci.org/forcedotcom/eslint-plugin-aura.svg?branch=master)](https://travis-ci.org/forcedotcom/eslint-plugin-aura)
+[![NPM version](https://img.shields.io/npm/v/@salesforce/eslint-plugin-aura.svg)](https://www.npmjs.com/package/@salesforce/eslint-plugin-aura)
+
 Salesforce Lightning (Aura) specific linting rules for ESLint
 
 Installation
