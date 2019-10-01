@@ -1,6 +1,6 @@
 {
   "name": "@salesforce/eslint-plugin-aura",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "ESLint plugin for Aura",
   "main": "lib/index.js",
   "repository": "https://github.com/forcedotcom/eslint-plugin-aura",
