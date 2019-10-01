@@ -40,3 +40,4 @@ target
 .idea
 .vscode
 .history
+.DS_Store
