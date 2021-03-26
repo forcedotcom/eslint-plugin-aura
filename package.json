@@ -37,9 +37,11 @@
   "dependencies": {
     "eslint-plugin-compat": "^3.9.0"
   },
+  "files": [
+    "lib/"
+  ],
   "engines": {
-    "node": ">=8.0.0",
-    "npm": ">=5.0.0"
+    "node": ">=12.0.0"
   },
   "commitlint": {
     "extends": [
