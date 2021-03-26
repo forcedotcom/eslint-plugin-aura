@@ -1,12 +1,13 @@
+const { RuleTester } = require('eslint')
 const proxyquire = require('proxyquire')
-const RuleTester = require('eslint').RuleTester
-const ruleTester = new RuleTester()
+
 const rule = proxyquire('../../../lib/rules/aura-service', {
   fs: {
     readdirSync() { return ['myLib.lib'] }
   }
 })
-
+    
+const ruleTester = new RuleTester()
 ruleTester.run('aura-service', rule, {
   valid: [
     {
