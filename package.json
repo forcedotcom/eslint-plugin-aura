@@ -56,11 +56,5 @@
   "mocha": {
     "recursive": true,
     "reporter": "dot"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "git-precommit-checks && lint-staged"
-    }
   }
 }
