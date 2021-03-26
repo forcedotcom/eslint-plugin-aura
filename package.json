@@ -19,6 +19,7 @@
   "license": "BSD-3-Clause",
   "scripts": {
     "prepare": "husky install",
+    "format": "prettier --write \"**/*.{js,md}\"",
     "test": "mocha"
   },
   "devDependencies": {
@@ -47,10 +48,10 @@
     ]
   },
   "lint-staged": {
-    "*.js": "eslint"
+    "**/*.js": "eslint",
+    "**/*.{js,md}": "prettier"
   },
   "prettier": {
-    "arrowParens": "always",
     "singleQuote": true
   },
   "mocha": {
