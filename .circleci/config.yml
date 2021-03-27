@@ -19,17 +19,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
-      - run:
-        name: Check formatting
-        command: npm run format:check
-
-      - run:
-        name: Run linter
-        command: npm run lint
-
-      - run:
-        name: Run tests
-        command: npm run test
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run test
 
 workflows:
   version: 2
