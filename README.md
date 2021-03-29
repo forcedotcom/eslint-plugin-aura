@@ -8,7 +8,7 @@ Salesforce Lightning (Aura) specific linting rules for ESLint
 ## Installation
 
 ```sh
-npm install --global @salesforce/eslint-plugin-aura
+npm install --save-dev @salesforce/eslint-plugin-aura
 ```
 
 ## Configuration
