@@ -4,9 +4,9 @@ This rule verifies that use of the framework APIs is according to the published 
 
 When Lightning Locker is enabled, the framework prevents the use of unsupported API objects or calls. That means your Aura components code is allowed to use:
 
-- Features built into JavaScript (“intrinsic” features)
+- Features built into JavaScript (“intrinsic” features).
 - Published, supported features built into the Aura Components programming model.
-- Published, supported features built into Lightning Locker SecureObject objects
+- Published, supported features built into Lightning Locker SecureObject objects.
 
 This rule deals with the supported, public framework APIs, for example, those available through the framework global $A.
 
