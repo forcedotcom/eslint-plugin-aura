@@ -1,3 +1,5 @@
+'use strict';
+
 const { RuleTester } = require('eslint');
 
 const rule = require('../../../lib/rules/aura-api');
