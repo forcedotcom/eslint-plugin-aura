@@ -21,7 +21,10 @@ Example:
 ```json
 {
   "plugins": ["@salesforce/eslint-plugin-aura"],
-  "extends": ["plugin:@salesforce/eslint-plugin-aura/recommended"]
+  "extends": [
+    "plugin:@salesforce/eslint-plugin-aura/recommended",
+    "plugin:@salesforce/eslint-plugin-aura/locker",
+  ]
 }
 ```
 
