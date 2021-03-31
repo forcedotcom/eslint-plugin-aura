@@ -16,18 +16,11 @@
 
 'use strict';
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
+const { RuleTester } = require('eslint');
 
-var rule = require('../../../lib/rules/secure-window'),
-  RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/secure-window');
 
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
-
-var ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 ruleTester.run('secure-window', rule, {
   valid: [
     'document.something',
