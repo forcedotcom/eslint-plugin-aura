@@ -16,18 +16,11 @@
 
 'use strict';
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
+const { RuleTester } = require('eslint');
 
-var rule = require('../../../lib/rules/secure-document'),
-  RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/secure-document');
 
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
-
-var ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 ruleTester.run('secure-document', rule, {
   valid: [
     'document.body',
