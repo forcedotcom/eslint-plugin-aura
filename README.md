@@ -28,6 +28,22 @@ Example:
 }
 ```
 
+## Rules
+
+### Aura
+
+| Rule ID                                   | Description        |
+| ----------------------------------------- | ------------------ |
+| [aura/aura-api](./docs/rules/aura-api.md) | validate Aura APIs |
+
+### Locker
+
+| Rule ID                                                 | Description                          |
+| ------------------------------------------------------- | ------------------------------------ |
+| [aura/ecma-intrinsics](./docs/rules/ecma-intrinsics.md) | validate JavaScript intrinsic APIs   |
+| [aura/secure-document](./docs/rules/secure-document.md) | validate secure document public APIs |
+| [aura/secure-window](./docs/rules/secure-window.md)     | validate secure window public APIs   |
+
 ## Configurations
 
 This package exposes 2 configurations for your usage.
