@@ -2,10 +2,10 @@
 
 const { RuleTester } = require('eslint');
 
-const rule = require('../../../lib/rules/getevt-uses-markup-prefix');
+const rule = require('../../../lib/rules/getevt-markup-prefix');
 
 const ruleTester = new RuleTester();
-ruleTester.run('getevt-uses-markup-prefix', rule, {
+ruleTester.run('getevt-markup-prefix', rule, {
   valid: ["$A.getEvt('markup://flexipageEditor:activateCompleted').fire()"],
   invalid: [
     {

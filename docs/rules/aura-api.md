@@ -1,4 +1,4 @@
-# Validate Aura API
+# Validate Aura API (`aura-api`)
 
 This rule verifies that use of the framework APIs is according to the published documentation. The use of undocumented or private features is disallowed.
 
