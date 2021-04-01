@@ -32,9 +32,13 @@ Example:
 
 ### Aura
 
-| Rule ID                                   | Description        |
-| ----------------------------------------- | ------------------ |
-| [aura/aura-api](./docs/rules/aura-api.md) | validate Aura APIs |
+| Rule ID                                                                                   | Description                                                                         |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [aura/aura-api](./docs/rules/aura-api.md)                                                 | validate Aura APIs                                                                  |
+| [aura/getevt-markup-prefix](./docs/rules/getevt-markup-prefix.md)                         | verify the presence of the `markup://` prefix for events accessed via `$A.getEvt()` |
+| [aura/no-deprecated-aura-error](./docs/rules/no-deprecated-aura-error.md)                 | prevent usage of `$A.error`                                                         |
+| [aura/no-deprecated-component-creation](./docs/rules/no-deprecated-component-creation.md) | prevent usage of deprecated component creation methods                              |
+| [aura/no-deprecated-event-creation](./docs/rules/no-deprecated-event-creation.md)         | prevent usage of deprecated event creation methods                                  |
 
 ### Locker
 

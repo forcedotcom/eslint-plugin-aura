@@ -1,4 +1,4 @@
-# Validate Secure Window Public API
+# Validate Secure Window Public API (`secure-window`)
 
 When LockerService is enabled the Lightning Platform prevents the use of unsupported API objects or calls. That means your Lightning components code is allowed to use:
 

@@ -1,4 +1,4 @@
-# Validate Secure Document Public API
+# Validate Secure Document Public API (`secure-document`)
 
 When LockerService is enabled the Lightning Platform prevents the use of unsupported API objects or calls. That means your Lightning components code is allowed to use:
 
