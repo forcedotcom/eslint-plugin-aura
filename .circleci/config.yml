@@ -1,9 +1,18 @@
-version: 2
+version: 2.1
+
+supported-eslint-versions: &supported-eslint-versions ["local", "7"]
+
 jobs:
   build:
+    parameters:
+      eslint-version:
+        type: string
+        description: >
+          Overrides the installed version of ESLint. When set to "local" the version of ESLint set
+          frozen in the package-lock.json is used.
+        default: "local"
     docker:
-      - image: circleci/node:lts
-
+      - image: circleci/node
     steps:
       - checkout
 
@@ -19,12 +28,23 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
+      - when:
+          condition:
+            not:
+              equal: [<<parameters.eslint-version>>, "local"]
+          steps:
+            - run:
+                name: Override version of eslint@<<parameters.eslint-version>>
+                command: npm install --save-dev eslint@<<parameters.eslint-version>>
+
       - run: npm run format:check
       - run: npm run lint
       - run: npm run test
 
 workflows:
-  version: 2
   build_and_test:
     jobs:
-      - build
+      - build:
+          matrix:
+            parameters:
+              eslint-version: *supported-eslint-versions
