@@ -14,7 +14,7 @@ npm install --save-dev @salesforce/eslint-plugin-aura
 ## Usage
 
 > [!IMPORTANT]
-> Starting with v3.0.0,@salesforce/eslint-plugin-aura only supports `eslint@v9`. Use `@salesforce/eslint-plugin-aura@v2.x` for older versions of eslint.
+> Starting with v3.0.0, `@salesforce/eslint-plugin-aura` only supports `eslint@v9`. Use `@salesforce/eslint-plugin-aura@v2.x` for older versions of eslint.
 
 Add this plugin to your ESLint configuration and extend your desired configuration. See
 [ESLint documentation](https://eslint.org/docs/latest/use/configure/plugins) for details.
