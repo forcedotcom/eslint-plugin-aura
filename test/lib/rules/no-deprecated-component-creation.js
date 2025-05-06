@@ -1,10 +1,9 @@
 'use strict';
 
-const { RuleTester } = require('eslint');
-
+const { getNewTester } = require('./shared');
 const rule = require('../../../lib/rules/no-deprecated-component-creation');
 
-const ruleTester = new RuleTester();
+const ruleTester = getNewTester();
 ruleTester.run('no-deprecated-component-creation', rule, {
   valid: [
     'var cmp = $A.getComponent(globalId);',

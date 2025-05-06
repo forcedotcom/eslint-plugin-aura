@@ -16,11 +16,10 @@
 
 'use strict';
 
-const { RuleTester } = require('eslint');
-
 const rule = require('../../../lib/rules/ecma-intrinsics');
+const { getNewTester } = require('./shared');
 
-const ruleTester = new RuleTester();
+const ruleTester = getNewTester();
 ruleTester.run('ecma-intrinsics', rule, {
   valid: [
     'Array.prototype',

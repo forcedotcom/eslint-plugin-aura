@@ -16,11 +16,11 @@
 
 'use strict';
 
-const { RuleTester } = require('eslint');
-
 const rule = require('../../../lib/rules/secure-document');
 
-const ruleTester = new RuleTester();
+const { getNewTester } = require('./shared');
+
+const ruleTester = getNewTester();
 ruleTester.run('secure-document', rule, {
   valid: [
     'document.body',

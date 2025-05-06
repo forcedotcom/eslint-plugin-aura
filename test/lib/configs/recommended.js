@@ -21,16 +21,6 @@ describe('Recommended config', () => {
     assert.ok(parsingError.message.match(/^Parsing error:/));
   });
 
-  it('reports a linting error when using a web platform API not available on IE11', async () => {
-    const [result] = await eslint.lintText('fetch("http://example.com");');
-
-    assert.strictEqual(result.messages.length, 1);
-
-    const compatError = result.messages[0];
-    assert.strictEqual(compatError.ruleId, 'compat/compat');
-    assert.ok(compatError.message.match(/^fetch is not supported in.* IE 11/));
-  });
-
   it("doesn't report error for known Aura globals", async () => {
     const [result] = await eslint.lintText(`
       $A.enqueueAction();

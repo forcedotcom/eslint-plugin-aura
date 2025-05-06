@@ -1,10 +1,9 @@
 'use strict';
 
-const { RuleTester } = require('eslint');
-
 const rule = require('../../../lib/rules/aura-api');
+const { getNewTester } = require('./shared');
 
-const ruleTester = new RuleTester();
+const ruleTester = getNewTester();
 ruleTester.run('aura-api', rule, {
   valid: ['$A.util.addClass(term)'],
   invalid: [
