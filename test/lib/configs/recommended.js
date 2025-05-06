@@ -7,10 +7,7 @@ const eslintPluginAura = require('../../../lib');
 
 const eslint = new ESLint({
   overrideConfigFile: true,
-  baseConfig: eslintPluginAura.configs.recommended,
-  plugins: {
-    '@salesforce/eslint-plugin-aura': eslintPluginAura,
-  },
+  baseConfig: [...eslintPluginAura.configs.recommended],
 });
 
 describe('Recommended config', () => {
