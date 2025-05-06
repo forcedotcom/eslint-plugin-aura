@@ -13,19 +13,20 @@ npm install --save-dev @salesforce/eslint-plugin-aura
 
 ## Usage
 
+> [!IMPORTANT]
+> Starting with v3.0.0,@salesforce/eslint-plugin-aura only supports `eslint@v9`. Use `@salesforce/eslint-plugin-aura@v2.x` for older versions of eslint.
+
 Add this plugin to your ESLint configuration and extend your desired configuration. See
-[ESLint documentation](http://eslint.org/docs/user-guide/configuring#configuring-plugins) for details.
+[ESLint documentation](https://eslint.org/docs/latest/use/configure/plugins) for details.
 
-Example:
+Example `eslint.config.js`:
 
-```json
-{
-  "plugins": ["@salesforce/eslint-plugin-aura"],
-  "extends": [
-    "plugin:@salesforce/eslint-plugin-aura/recommended",
-    "plugin:@salesforce/eslint-plugin-aura/locker"
-  ]
-}
+```js
+const eslintAura = require('@salesforce/eslint-plugin-aura');
+module.exports = [
+  ...eslintAura.configs.recommended,
+  ...eslintAura.configs.locker,
+];
 ```
 
 ## Rules
