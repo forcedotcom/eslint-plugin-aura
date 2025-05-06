@@ -53,7 +53,7 @@ module.exports = [
 
 This package exposes 2 configurations for your usage.
 
-### `@salesforce/eslint-plugin-aura/recommended` configuration
+### Recommended configuration
 
 **Goal:**
 Prevent common pitfalls with Lightning component development, and enforce other Salesforce platform restrictions.
@@ -64,7 +64,16 @@ Prevent common pitfalls with Lightning component development, and enforce other 
 - Proper usage of the `$A` global, via the [`aura-api`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/aura-api.md) rule.
 - Browser compatibility rules for [Salesforce supported browsers](https://help.salesforce.com/articleView?id=sf.getstart_browsers_sfx.htm&type=5).
 
-### `@salesforce/eslint-plugin-aura/locker` configuration
+**Usage**
+
+```js
+// eslint.config.js
+const eslintPluginAura = require('@salesforce/eslint-plugin-aura');
+
+module.exports = [...eslintPluginAura.configs.recommended];
+```
+
+### Lightning Locker configuration
 
 **Goal:**
 Prevent [Lightning Locker](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/security_code.htm) violations.
@@ -74,3 +83,12 @@ Prevent [Lightning Locker](https://developer.salesforce.com/docs/atlas.en-us.lig
 - `@salesforce/eslint-plugin-aura/recommended` rules.
 - Proper usage of `document` and `window` via the [`secure-document`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/secure-document.md) and [`secure-window`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/secure-window.md) rules, respectively.
 - Proper usage of Javascript intrinsic APIs via the [`ecma-intrinsics`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/ecma-intrinsics.md) rule.
+
+**Usage**
+
+```js
+// eslint.config.js
+const eslintPluginAura = require('@salesforce/eslint-plugin-aura');
+
+module.exports = [...eslintPluginAura.configs.locker];
+```
