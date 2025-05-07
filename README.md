@@ -14,7 +14,7 @@ npm install --save-dev @salesforce/eslint-plugin-aura
 ## Usage
 
 > [!IMPORTANT]
-> Starting with v3.0.0, `@salesforce/eslint-plugin-aura` only supports `eslint@v9`. Use `@salesforce/eslint-plugin-aura@v2.x` for older versions of eslint.
+> Starting with v3.0.0, `@salesforce/eslint-plugin-aura` only supports `eslint@v9`. Use `@salesforce/eslint-plugin-aura@v2.x` for older versions of ESLint.
 
 Add this plugin to your ESLint configuration and extend your desired configuration. See
 [ESLint documentation](https://eslint.org/docs/latest/use/configure/plugins) for details.
@@ -71,6 +71,26 @@ Prevent common pitfalls with Lightning component development, and enforce other 
 const eslintPluginAura = require('@salesforce/eslint-plugin-aura');
 
 module.exports = [...eslintPluginAura.configs.recommended];
+```
+
+#### Migration to ESLint v9
+
+The recommended configurations extend ESLint's `js/recommended` [predefined configuration](https://eslint.org/docs/latest/use/configure/configuration-files#using-predefined-configurations) (previously known as `eslint:recommended`). ESLint v9 has added 4 new rules to the recommended config, you can read about that [here](https://eslint.org/docs/latest/use/migrate-to-9.0.0#eslint-recommended). You can opt to turn these off for backwards compatibility.
+
+```js
+// eslint.config.js
+const eslintAura = require('@salesforce/eslint-plugin-aura');
+module.exports = [
+  ...eslintAura.configs.recommended,
+  {
+    rules: {
+      'no-empty-static-block': 'off',
+      'no-constant-binary-expression': 'off',
+      'no-new-native-non-constructor': 'off',
+      'no-unused-private-class-members': 'off',
+    }
+  }
+];
 ```
 
 ### Lightning Locker configuration
