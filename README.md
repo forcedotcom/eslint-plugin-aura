@@ -88,8 +88,8 @@ module.exports = [
       'no-constant-binary-expression': 'off',
       'no-new-native-non-constructor': 'off',
       'no-unused-private-class-members': 'off',
-    }
-  }
+    },
+  },
 ];
 ```
 
