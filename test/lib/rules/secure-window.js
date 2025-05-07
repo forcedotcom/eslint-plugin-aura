@@ -16,11 +16,10 @@
 
 'use strict';
 
-const { RuleTester } = require('eslint');
-
 const rule = require('../../../lib/rules/secure-window');
+const { getNewTester } = require('./shared');
 
-const ruleTester = new RuleTester();
+const ruleTester = getNewTester();
 ruleTester.run('secure-window', rule, {
   valid: [
     'document.something',

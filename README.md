@@ -13,19 +13,20 @@ npm install --save-dev @salesforce/eslint-plugin-aura
 
 ## Usage
 
+> [!IMPORTANT]
+> Starting with v3.0.0, `@salesforce/eslint-plugin-aura` only supports `eslint@v9`. Use `@salesforce/eslint-plugin-aura@v2.x` for older versions of ESLint.
+
 Add this plugin to your ESLint configuration and extend your desired configuration. See
-[ESLint documentation](http://eslint.org/docs/user-guide/configuring#configuring-plugins) for details.
+[ESLint documentation](https://eslint.org/docs/latest/use/configure/plugins) for details.
 
-Example:
+Example `eslint.config.js`:
 
-```json
-{
-  "plugins": ["@salesforce/eslint-plugin-aura"],
-  "extends": [
-    "plugin:@salesforce/eslint-plugin-aura/recommended",
-    "plugin:@salesforce/eslint-plugin-aura/locker"
-  ]
-}
+```js
+const eslintAura = require('@salesforce/eslint-plugin-aura');
+module.exports = [
+  ...eslintAura.configs.recommended,
+  ...eslintAura.configs.locker,
+];
 ```
 
 ## Rules
@@ -52,7 +53,7 @@ Example:
 
 This package exposes 2 configurations for your usage.
 
-### `@salesforce/eslint-plugin-aura/recommended` configuration
+### Recommended configuration
 
 **Goal:**
 Prevent common pitfalls with Lightning component development, and enforce other Salesforce platform restrictions.
@@ -63,7 +64,36 @@ Prevent common pitfalls with Lightning component development, and enforce other 
 - Proper usage of the `$A` global, via the [`aura-api`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/aura-api.md) rule.
 - Browser compatibility rules for [Salesforce supported browsers](https://help.salesforce.com/articleView?id=sf.getstart_browsers_sfx.htm&type=5).
 
-### `@salesforce/eslint-plugin-aura/locker` configuration
+**Usage**
+
+```js
+// eslint.config.js
+const eslintPluginAura = require('@salesforce/eslint-plugin-aura');
+
+module.exports = [...eslintPluginAura.configs.recommended];
+```
+
+#### Migration to ESLint v9
+
+The recommended configurations extend ESLint's `js/recommended` [predefined configuration](https://eslint.org/docs/latest/use/configure/configuration-files#using-predefined-configurations) (previously known as `eslint:recommended`). ESLint v9 has added 4 new rules to the recommended config, you can read about that [here](https://eslint.org/docs/latest/use/migrate-to-9.0.0#eslint-recommended). You can opt to turn these off for backwards compatibility.
+
+```js
+// eslint.config.js
+const eslintAura = require('@salesforce/eslint-plugin-aura');
+module.exports = [
+  ...eslintAura.configs.recommended,
+  {
+    rules: {
+      'no-empty-static-block': 'off',
+      'no-constant-binary-expression': 'off',
+      'no-new-native-non-constructor': 'off',
+      'no-unused-private-class-members': 'off',
+    },
+  },
+];
+```
+
+### Lightning Locker configuration
 
 **Goal:**
 Prevent [Lightning Locker](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/security_code.htm) violations.
@@ -73,3 +103,12 @@ Prevent [Lightning Locker](https://developer.salesforce.com/docs/atlas.en-us.lig
 - `@salesforce/eslint-plugin-aura/recommended` rules.
 - Proper usage of `document` and `window` via the [`secure-document`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/secure-document.md) and [`secure-window`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/secure-window.md) rules, respectively.
 - Proper usage of Javascript intrinsic APIs via the [`ecma-intrinsics`](https://github.com/forcedotcom/eslint-plugin-aura/blob/master/docs/rules/ecma-intrinsics.md) rule.
+
+**Usage**
+
+```js
+// eslint.config.js
+const eslintPluginAura = require('@salesforce/eslint-plugin-aura');
+
+module.exports = [...eslintPluginAura.configs.locker];
+```

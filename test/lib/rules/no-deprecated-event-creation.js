@@ -1,10 +1,9 @@
 'use strict';
 
-const { RuleTester } = require('eslint');
-
+const { getNewTester } = require('./shared');
 const rule = require('../../../lib/rules/no-deprecated-event-creation');
 
-const ruleTester = new RuleTester();
+const ruleTester = getNewTester();
 ruleTester.run('no-deprecated-event-creation', rule, {
   valid: [
     "var xx = $A.get('e.something');",

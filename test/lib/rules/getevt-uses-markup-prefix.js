@@ -1,10 +1,9 @@
 'use strict';
 
-const { RuleTester } = require('eslint');
-
 const rule = require('../../../lib/rules/getevt-markup-prefix');
+const { getNewTester } = require('./shared');
 
-const ruleTester = new RuleTester();
+const ruleTester = getNewTester();
 ruleTester.run('getevt-markup-prefix', rule, {
   valid: ["$A.getEvt('markup://flexipageEditor:activateCompleted').fire()"],
   invalid: [
