@@ -3,6 +3,7 @@
 This page lists the operational governance model of this project, as well as the recommendations and requirements for how to best contribute to eslint-plugin-aura. We strive to obey these as best as possible. As always, thanks for contributing – we hope these guidelines make it easier and shed some light on our approach and processes.
 
 # Governance Model
+
 ## Published but not supported
 
 The intent and goal of open sourcing this project is because it may contain useful or interesting code/concepts that we wish to share with the larger open source community. Although occasional work may be done on it, we will not be looking for or soliciting contributions.
@@ -12,26 +13,29 @@ The intent and goal of open sourcing this project is because it may contain usef
 Use GitHub Issues page to submit issues, enhancement requests and discuss ideas.
 
 ### Bug Reports and Fixes
--  If you find a bug, please search for it in the [Issues](https://github.com/forcedotcom/eslint-plugin-aura/issues), and if it isn't already tracked,
-   [create a new issue](https://github.com/forcedotcom/eslint-plugin-aura/issues/new). Fill out the "Bug Report" section of the issue template. Even if an Issue is closed, feel free to comment and add details, it will still
-   be reviewed.
--  Issues that have already been identified as a bug (note: able to reproduce) will be labelled `bug`.
--  If you'd like to submit a fix for a bug, [send a Pull Request](#creating_a_pull_request) and mention the Issue number.
-  -  Include tests that isolate the bug and verifies that it was fixed.
+
+- If you find a bug, please search for it in the [Issues](https://github.com/forcedotcom/eslint-plugin-aura/issues), and if it isn't already tracked,
+  [create a new issue](https://github.com/forcedotcom/eslint-plugin-aura/issues/new). Fill out the "Bug Report" section of the issue template. Even if an Issue is closed, feel free to comment and add details, it will still
+  be reviewed.
+- Issues that have already been identified as a bug (note: able to reproduce) will be labelled `bug`.
+- If you'd like to submit a fix for a bug, [send a Pull Request](#creating_a_pull_request) and mention the Issue number.
+- Include tests that isolate the bug and verifies that it was fixed.
 
 ### New Features
--  If you'd like to add new functionality to this project, describe the problem you want to solve in a [new Issue](https://github.com/forcedotcom/eslint-plugin-aura/issues/new).
--  Issues that have been identified as a feature request will be labelled `enhancement`.
--  If you'd like to implement the new feature, please wait for feedback from the project
-   maintainers before spending too much time writing the code. In some cases, `enhancement`s may
-   not align well with the project objectives at the time.
+
+- If you'd like to add new functionality to this project, describe the problem you want to solve in a [new Issue](https://github.com/forcedotcom/eslint-plugin-aura/issues/new).
+- Issues that have been identified as a feature request will be labelled `enhancement`.
+- If you'd like to implement the new feature, please wait for feedback from the project
+  maintainers before spending too much time writing the code. In some cases, `enhancement`s may
+  not align well with the project objectives at the time.
 
 ### Tests, Documentation, Miscellaneous
--  If you'd like to improve the tests, you want to make the documentation clearer, you have an
-   alternative implementation of something that may have advantages over the way its currently
-   done, or you have any other change, we would be happy to hear about it!
-  -  If its a trivial change, go ahead and [send a Pull Request](#creating_a_pull_request) with the changes you have in mind.
-  -  If not, [open an Issue](https://github.com/forcedotcom/eslint-plugin-aura/issues/new) to discuss the idea first.
+
+- If you'd like to improve the tests, you want to make the documentation clearer, you have an
+  alternative implementation of something that may have advantages over the way its currently
+  done, or you have any other change, we would be happy to hear about it!
+- If its a trivial change, go ahead and [send a Pull Request](#creating_a_pull_request) with the changes you have in mind.
+- If not, [open an Issue](https://github.com/forcedotcom/eslint-plugin-aura/issues/new) to discuss the idea first.
 
 If you're new to our project and looking for some way to make your first contribution, look for
 Issues labelled `good first contribution`.
@@ -39,17 +43,21 @@ Issues labelled `good first contribution`.
 # Development Setup
 
 ## Prerequisites
+
 - Node.js >= 12.0.0
 - npm
 
 ## Installation
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/forcedotcom/eslint-plugin-aura.git
    cd eslint-plugin-aura
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -60,12 +68,14 @@ Issues labelled `good first contribution`.
    ```
 
 ## Available Scripts
+
 - `npm run lint` - Run ESLint on the codebase
 - `npm run format` - Format code using Prettier
 - `npm run format:check` - Check if code is properly formatted
 - `npm test` - Run the test suite using Mocha
 
 ## Project Structure
+
 - `lib/` - Main source code
   - `rules/` - ESLint rules for Aura
   - `locker/` - Lightning Locker specific rules
@@ -97,7 +107,7 @@ Issues labelled `good first contribution`.
 
 # Creating a Pull Request
 
-1. **Ensure the bug/feature was not already reported** by searching on GitHub under Issues.  If none exists, create a new issue so that other contributors can keep track of what you are trying to add/fix and offer suggestions (or let you know if there is already an effort in progress).
+1. **Ensure the bug/feature was not already reported** by searching on GitHub under Issues. If none exists, create a new issue so that other contributors can keep track of what you are trying to add/fix and offer suggestions (or let you know if there is already an effort in progress).
 2. **Fork** the repository on GitHub.
 3. **Clone** the forked repo to your machine.
 4. **Create** a new branch to contain your work (e.g. `git checkout -b fix-issue-11`)
@@ -115,17 +125,21 @@ Issues labelled `good first contribution`.
 > **NOTE**: Be sure to [sync your fork](https://help.github.com/articles/syncing-a-fork/) before making a pull request.
 
 # Contributor License Agreement ("CLA")
+
 In order to accept your pull request, we need you to submit a CLA. You only need
 to do this once to work on any of Salesforce's open source projects.
 
 Complete your CLA here: <https://cla.salesforce.com/sign-cla>
 
 # Issues
+
 We use GitHub issues to track public bugs. Please ensure your description is
 clear and has sufficient instructions to be able to reproduce the issue.
 
 # Code of Conduct
+
 Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 # License
+
 By contributing your code, you agree to license your contribution under the terms of our project [LICENSE](LICENSE) and to sign the [Salesforce CLA](https://cla.salesforce.com/sign-cla)
